@@ -11,6 +11,6 @@ steps involved in this project
 * use the url generated 
 
     The app url created in this project is given below:
-    https://gradeprediction-api.herokuapp.com/predict 
+    https://gradeprediction-api.herokuapp.com/
 
     Thank you :)
