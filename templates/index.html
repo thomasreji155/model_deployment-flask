@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset = "UTF-8">
+    <title>grade prediction</title>
+</head>
+<body>
+    <br><br>
+    <h1>Grade prediction (G3) </h1>
+    <form action="{{url_for('predict')}}" method="post">
+        <div style="margin:0;padding:0">
+            <div>
+                <h3 > Mothers education (5 scale)  </h>
+                <input id="feature1" name= "Medu"  type="number" required = "required" />
+            </div>
+
+            <div>
+                <h3 >Fathers education (5 scale)  </h>
+                <input id="feature2" name= "Fedu"  type="number" required = "required" />
+            </div>
+
+            <div>
+                <h3 >Health (5 scale)  </h>
+                <input id="feature3" name= "Health"  type="number" required = "required" />
+            </div>
+
+            <div>
+                <h3 >No of absences  </h>
+                <input id="feature4" name= "absences"  type="number" required = "required" />
+            </div>
+            <div>
+                <h3 >G1 ( first sem point)  </h>
+                <input id="feature5" name= "G1"  type="number" required = "required" />
+            </div>
+            <div>
+                <h3 >G1 ( second sem point) </h>
+                <input id="feature6" name= "G2"  type="number" required = "required" />
+            </div>
+            <br>
+            <button class="ui blue button" type="submit">predict</button>
+        </form>
+        <br><br><h3>{{ prediction_text }}</h3>     
+    </div>
+<style>
+    body {
+        background-color: rgb(221, 224, 226);
+        text-align: center;
+        font-family: sans-serif;
+        padding: 0px;
+    }   
+</style>
+</body>
+
+</html>
+
